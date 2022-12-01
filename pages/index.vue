@@ -2,9 +2,9 @@
     <section class="h-screen">
         <div class="px-40 h-full">
             <div class="flex justify-center items-center flex-wrap h-full gap-6 text-gray-800">
-            <div class="md:w-8/12 lg:w-6/12 mb-12">
+            <div class="md:w-8/12 lg:w-6/12">
                 <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                    src="../src/images/stat_undraw.svg"
                     class="w-full"
                     alt="Sample image"
                 />
@@ -16,19 +16,28 @@
                     <p class="text-slate-500">You may login your <i>Wrike Account</i></p>
                 </div>
                 <!-- Email input -->
-                <div class="mb-6">
+                <div class=" flex items-center border-2 py-2 px-3 rounded-2xl mb-6 bg-white focus-within:border-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                    </svg>
                     <input
                     type="text"
-                    class="form-control block w-full px-7 py-3 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-600 focus:outline-none"
-                    placeholder="Email address"
+                    class="form-control block w-full px-2 py-3 font-normal text-gray-700 focus:outline-none"
+                    placeholder="Email Address"
                     />
                 </div>
 
                 <!-- Password input -->
-                <div class="mb-6">
+                <div class=" flex items-center border-2 py-2 px-3 rounded-2xl mb-6 bg-white focus-within:border-purple-500">
+                    <span class="focus:outline-none focus:shadow-outline focus:border-purple-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    
                     <input
                     type="password"
-                    class="form-control block w-full px-7 py-3 font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-600 focus:outline-none"
+                    class="form-control block w-full px-2 py-3 font-normal text-gray-700 focus:outline-none"
                     placeholder="Password"
                     />
                 </div>
@@ -45,13 +54,12 @@
                         >Remember me</label
                     >
                     </div>
-                    <a
-                    href="#!"
+                    <NuxtLink
+                    to="resetPassword"
                     class="text-purple-600 hover:text-purple-700 focus:text-purple-700 active:text-purple-800 duration-200 transition ease-in-out"
                     >
                         <span> Forgot password?</span>
-                    </a
-                    >
+                    </NuxtLink>
                 </div>
 
                 <!-- Submit button -->
@@ -86,10 +94,10 @@
                 </form>
             </div>
             </div>
-            <Footer />
+            
         </div>
         
     </section>
 
-    
+    <Footer />
 </template>
