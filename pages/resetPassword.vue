@@ -1,16 +1,16 @@
 <template>
     <section class="min-h-screen flex items-center justify-center">
-            <div class="w-3/12">
+            <div class="lg:w-4/12 w-8/12">
             <div>
                 <NuxtLink to="./" class="bg-transparent font-bold my-10 inline-flex items-center text-purple-600 animate-bounce">
                     <svg class="w-7 h-7 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
-                    <span class="px-2">BACK</span>
+                    <span class="px-2 ">Back to log in </span>
                 </NuxtLink>
             </div>
                 <form>
                 <div class="mb-10">
-                    <h1 class="text-violet-600 text-5xl font-extrabold mb-2">Reset Your Password</h1>
-                    <p class="text-slate-500">Lost your password? Please enter your email address. You will recieve a link to create a new password via email.</p>
+                    <h1 class="text-violet-600 text-5xl font-extrabold mb-2">Reset Password</h1>
+                    <p class="text-slate-500">Enter the email associated with your account and we'll send an email with instructions to reset your password.</p>
                 </div>
                 <!-- Email input -->
                 <div class=" flex items-center border-2 py-2 px-3 rounded-2xl mb-6 bg-white focus-within:border-purple-500">
