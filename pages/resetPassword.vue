@@ -1,6 +1,6 @@
 <template>
     <section class="min-h-screen flex items-center justify-center">
-            <div class="lg:w-4/12 w-8/12" v-if="resetPassword">
+            <div class="lg:w-4/12 w-8/12" >
             <div>
                 <NuxtLink to="./" class="bg-transparent font-bold my-10 inline-flex items-center text-purple-600 animate-bounce">
                     <svg class="w-7 h-7 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
@@ -40,7 +40,7 @@
                 </form>  
             </div>
 
-            <div class="lg:w-4/12 w-8/12">
+            <div class="lg:w-4/12 w-8/12" v-if="resetPassword">
                 <div class=" md:mx-auto">
                     <iframe class="mx-auto my-6" src="https://embed.lottiefiles.com/animation/96237"></iframe>
                     <!-- <svg viewBox="0 0 24 24" class="text-green-600 w-16 h-16 mx-auto my-6">
@@ -82,5 +82,7 @@ const submitResetPassword = () => {
     resetPassword = !resetPassword;
 
 }
+
+console.log(resetPassword)
 
 </script>
