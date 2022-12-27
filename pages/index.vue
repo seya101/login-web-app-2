@@ -64,9 +64,9 @@
                 <!-- Submit button -->
                <div class="flex justify-center mb-16">
                 <button
+                    
                     type="submit"
-                    class="inline-block px-7 py-4 bg-purple-600 text-white font-medium text-lg leading-snug uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-                   
+                    class="inline-block px-7 py-4 bg-purple-600 text-white font-medium text-lg leading-snug uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out w-full" 
                 >
                     Sign in
                 </button>
@@ -78,14 +78,20 @@
                     <p class="text-center font-semibold mx-4 mb-0">OR</p>
                 </div>
 
-                
-                   
-                    
                 <button class="flex items-center justify-center flex-none px-3 py-4 md:px-4 md:py-3 border-2 rounded-lg font-medium border-purple-700 w-full shadow-md hover:shadow-lg focus:shadow-lg focus:ring-0 active:shadow-lg transition duration-150">
                     <img src="@/src/images/wrike.svg" alt="" class="w-10">
                     <span>Sign in with Wrike</span>
                 </button>
                 </form>
+
+                <div class="flex items-center justify-center gap-2 mt-5">
+                    <button @click="signIn" class="bg-red-100 rounded-sm py-3 px-3">
+                    <span>IN Test BTN</span>
+                </button>
+                <button @click="signOut" class="bg-red-100 rounded-sm py-3 px-3">
+                    <span>OUT Test BTN</span>
+                </button>
+                </div>
             </div>
             </div>
             
@@ -96,3 +102,23 @@
 
    
 </template>
+
+<script setup>
+const credentials = ref()
+
+// Signin Fuction
+const signIn = async() => {
+    const email = "testing@gmail.com"
+    const password = "123456"
+
+    credentials.value = await signInUser(email, password)
+    console.log("USER SIGN IN: ", credentials)
+}
+
+// SignOut Fuction
+const signOut = async() => {
+    const result = await signOutUser()
+    console.log("USER SIGN OUT: ", result)
+}
+
+</script>
