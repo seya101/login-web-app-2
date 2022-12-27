@@ -1,11 +1,10 @@
 <template>
     <section class="h-screen">
-        <div class="px-40 h-full">
-            <div class="flex justify-center items-center flex-wrap h-full gap-6 text-gray-800">
+        <div class="px-40 md:h-full">
+            <div class="flex md:justify-center md:items-center flex-wrap h-full gap-6 text-gray-800 sm:justify-start  sm:items-end sm:gap-0">
             <div class="md:w-8/12 lg:w-6/12">
                 <img
                     src="../src/images/stat_undraw.svg"
-                    class="w-full"
                     alt="Sample image"
                 />
             </div>
@@ -13,7 +12,7 @@
                 <form>
                 <div class="mb-10">
                     <h1 class="text-violet-600 text-5xl font-extrabold mb-2">Hey, hello</h1>
-                    <p class="text-slate-500">You may login your <i>Wrike Account</i></p>
+                    <p class="text-slate-500">You may login your <i class="underline decoration-solid decoration-lime-400 decoration-4 ">Wrike</i> Account</p>
                 </div>
                 <!-- Email input -->
                 <div class=" flex items-center border-2 py-2 px-3 rounded-2xl mb-6 bg-white focus-within:border-purple-500">
@@ -79,24 +78,21 @@
                     <p class="text-center font-semibold mx-4 mb-0">OR</p>
                 </div>
 
-                <div class="flex justify-center items-center mt-16 border-emerald-500">
-                    <a
-                    class="px-7 py-3 text-black font-medium text-lg leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3 bg-slate-50 hover:bg-slate-100" 
-                    href="#!"
-                    role="button"
-                    >
-                    <!-- <img src="@/src/images/wrike-logo.png" alt="Wrike Integration" width="300" height=""> -->
-                    <!-- <a href="https://iconscout.com/icons/wrike" target="_blank">Wrike Logo Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>  -->
-                    <img src="@/src/images/wrike.svg" alt="" width="50px" height="50px">
-                        Continue with Wrike
-                    </a>
-                </div>
+                
+                   
+                    
+                <button class="flex items-center justify-center flex-none px-3 py-4 md:px-4 md:py-3 border-2 rounded-lg font-medium border-purple-700 w-full shadow-md hover:shadow-lg focus:shadow-lg focus:ring-0 active:shadow-lg transition duration-150">
+                    <img src="@/src/images/wrike.svg" alt="" class="w-10">
+                    <span>Sign in with Wrike</span>
+                </button>
                 </form>
             </div>
             </div>
             
         </div>
+
+        <Footer />
     </section>
 
-    <Footer />
+   
 </template>
