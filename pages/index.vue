@@ -84,14 +84,14 @@
                 </button>
                 </form>
 
-                <div class="flex items-center justify-center gap-2 mt-5">
+                <!-- <div class="flex items-center justify-center gap-2 mt-5">
                     <button @click="signIn" class="bg-red-100 rounded-sm py-3 px-3">
                     <span>IN Test BTN</span>
                 </button>
                 <button @click="signOut" class="bg-red-100 rounded-sm py-3 px-3">
                     <span>OUT Test BTN</span>
                 </button>
-                </div>
+                </div> -->
             </div>
             </div>
             
